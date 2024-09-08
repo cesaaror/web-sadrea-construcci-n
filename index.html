@@ -8,15 +8,11 @@
     <meta name="keywords" content="SadreaBuildingServices, construcción, reformas, mantenimiento, edificación, calidad, proyectos">
     <meta name="author" content="cesar-renteria<">
 
-    <!-- Enlace a la CDN de Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-btDqf766uXgDdX3z5GCDowTlfLqkh4I3p4F5Iq4GgA3hFBlxOg82KcExcmYOOJUp" crossorigin="anonymous">
 
-<!-- Bootstrap JS y Popper.js (Requeridos para los modales de Bootstrap) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb5z3m+PsLDXjUdBRWRc9wFGtUKck2JbBqy44M2iD6RJag" crossorigin="anonymous"></script>
-
-    <!-- Enlace a la fuente Montserrat (cambiar según sea necesario) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb5z3m+PsLDXjUdBRWRc9wFGtUKck2JbBqy44M2iD6RJag" crossorigin="anonymous"></script>  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
 
     <!-- Enlace a la librería AOS -->
@@ -94,7 +90,7 @@
             <label for="message">Mensaje:</label>
             <textarea id="message" name="message" required></textarea>
 
-            <!-- Agrega más campos según sea necesario -->
+            
 
             <input type="submit" value="Enviar">
         </form>
@@ -286,8 +282,6 @@
     </script>
     <section>
     
-  <!-- Contenedor principal de la página con disposición flexbox -->
-  <!-- Contenedor principal de la página con disposición flexbox -->
   <div class="container-fluid d-flex justify-content-end mt-5">
     <!-- Caja de chat estilo opciones -->
     <div id="chat" class="chat-container">
@@ -296,7 +290,7 @@
             <div class="online-status"></div>
         </div>
         <div class="chat-body" id="chatBody">
-            <!-- Aquí van los mensajes del chat -->
+            
         </div>
     </div>
 </div>
@@ -353,9 +347,9 @@
                 <p>
                     <strong>Email:</strong> sadrea1@outlook.es<br>
                     <strong>Telefon:</strong><br>
-                    +34 618 49 94 58<br>
-                    +34 660 92 23 49<br>
-                    +34 685 47 07 88
+                    +34 618 49 94 5<br>
+                    +34 660 92 3 49<br>
+                    +34 685 47 7 88
                 </p>
                 <h5 class="text-warning mb-3">Folge uns auf Social Media</h5>
                 <a href="#" class="text-warning me-2"><i class="fab fa-instagram"></i></a>
@@ -387,50 +381,32 @@
         $('#contactForm').submit(function (e) {
             e.preventDefault();
 
-            // Aquí puedes agregar lógica adicional para la validación del formulario
-            // por ejemplo, verificar el formato del correo electrónico, longitud del mensaje, etc.
-            // Puedes usar bibliotecas como jQuery Validation para esto.
-
-            // Una vez que las validaciones pasan, puedes enviar el formulario usando AJAX
             $.ajax({
                 type: 'POST',
                 url: 'enviar.php',  // Asegúrate de tener el archivo enviar.php para manejar el envío del formulario
                 data: $('#contactForm').serialize(),
                 success: function (response) {
-                    // Maneja la respuesta del servidor después de enviar el formulario
-                    console.log(response);
-
-                    // Utiliza AlertifyJS para mostrar un mensaje de éxito
+                   
+                    console.log(response);                  
                     alertify.success('¡Formulario enviado con éxito!');
-
-                    // Puedes actualizar la interfaz de usuario para proporcionar una retroalimentación más amigable
-                    // Por ejemplo, redirigir a una página de agradecimiento o mostrar un mensaje en el formulario.
                 },
-                error: function (error) {
-                    // Maneja errores si hay problemas con la solicitud AJAX
-                    console.log(error);
-
-                    // Utiliza AlertifyJS para mostrar un mensaje de error
+                error: function (error) {                 
+                    console.log(error);                  
                     alertify.error('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
                     
-                    // Proporciona mensajes más informativos y sugiere acciones al usuario
                 }
             });
         });
     });
 </script>
 
-
-
-    <!-- Configuración de AOS -->
     <script>
         AOS.init({
             offset: 200,
             duration: 1000,
         });
     </script>
-
-    <!-- Script para manejar el cambio de tamaño del menú al hacer scroll -->
+    
     <script>
         window.addEventListener("scroll", function () {
             var navbar = document.querySelector("header.navbar");
@@ -439,7 +415,7 @@
     </script>
     <script>
         $(document).ready(function () {
-            // Cambiar el comportamiento del menú en dispositivos móviles
+          
             $('.navbar-toggler').on('click', function () {
                 $('#navbarNav').toggleClass('show');
             });
@@ -455,9 +431,7 @@
         navbarBrand.classList.toggle("navbar-brand-scrolled", window.scrollY > 50);
     });
 });
-    </script>
-
-    <!-- Animación de desvanecimiento -->
+    </script>  
     <style>
         @keyframes fadeIn {
             from {
@@ -494,24 +468,18 @@
 
                 $group.animate({ scrollLeft: distance }, duration);
             }
-
-            // Llamar a la función para el primer grupo de servicios
-            shiftServices('services-group-1', 1000, 5000);
-            // Llamar a la función para el segundo grupo de servicios
+           
+            shiftServices('services-group-1', 1000, 5000);          
             shiftServices('services-group-2', -1000, 5000);
         });
-    </script>
+    </script>    
     
-     <!-- Script de Particles.js -->
      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-     <!-- Script de Particles.js -->
-     <script src="js/js/particles.min.js"></script>
-       <!-- Enlace a Particles.js (actualiza según tus necesidades) -->
+  
+     <script src="js/js/particles.min.js"></script>     
     
     <script src="js/particles-config.js"></script>
-    <script src="js/dinamico.js" ></script>
-    
-     <!-- jQuery -->
+    <script src="js/dinamico.js" ></script>    
      
      <script src="script.js" ></script>
      

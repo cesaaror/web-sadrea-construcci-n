@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="dl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SadreaBuildingServices ofrece servicios de construcción, reformas y mantenimiento. Contacta con nosotros para proyectos de calidad y atención personalizada.">
+    <meta name="keywords" content="SadreaBuildingServices, construcción, reformas, mantenimiento, edificación, calidad, proyectos">
+    <meta name="author" content="cesar-renteria<">
+
+    <!-- Enlace a la CDN de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-btDqf766uXgDdX3z5GCDowTlfLqkh4I3p4F5Iq4GgA3hFBlxOg82KcExcmYOOJUp" crossorigin="anonymous">
+
+<!-- Bootstrap JS y Popper.js (Requeridos para los modales de Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb5z3m+PsLDXjUdBRWRc9wFGtUKck2JbBqy44M2iD6RJag" crossorigin="anonymous"></script>
+
+    <!-- Enlace a la fuente Montserrat (cambiar según sea necesario) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
+
+    <!-- Enlace a la librería AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+   
+    <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="css/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="css/fontawesome/css/brands.css">
+   
+    
+    <!-- Enlace a la hoja de estilo CSS de AlertifyJS -->
+
+
+<!-- Enlace al archivo JavaScript de AlertifyJS y css -->
+
+<script src="js/alertify.js" ></script>
+<link rel="stylesheet" href="css/alertify.css">
+<script src="js/js/ngAlertify.js" ></script>
+    <!-- Enlace a tu archivo de estilos personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Enlace a jQuery (asegúrate de incluirlo antes de AlertifyJS) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  
+
+    <!-- Enlace a tu archivo de scripts JavaScript -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+    <header class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="fotos/logo.png" alt="Logo de Sadrea Building Services" class="img-fluid" style="max-height: 50px;">
+            </a>
+    
+            <!-- Botón de hamburguesa para dispositivos pequeños -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Menú de Navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Startseite</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <button class="nav-link" >Kontakt</button>
+                    </li>
+                  
+                </ul>
+            </div>
+            <!-- Agrega el popup -->
+<div id="contactPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="closeContactPopup">&times;</span>
+        <h2>Solicita tu Presupuesto</h2>
+        <!-- Agrega tu formulario aquí -->
+        <form id="contactFormPopup" action="#" method="post">
+            <!-- Campos del formulario -->
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <!-- Agrega más campos según sea necesario -->
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</div>
+
+    
+               <!-- Caja de Idiomas -->
+<div class="container text-md-end mt-3">
+    <div class="btn-group" role="group" aria-label="Idiomas">
+        <button type="button" class="btn btn-outline-light">
+            <img src="fotos/bandera.png" alt="Català" style="max-width: 30px; height: auto;">
+        </button>
+        <button type="button" class="btn btn-outline-light">
+            <img src="fotos/espana.png" alt="Español" style="max-width: 30px; height: auto;">
+        </button>
+        <button type="button" class="btn btn-outline-light">
+            <img src="fotos/reino-unido.png" alt="English" style="max-width: 30px; height: auto;">
+        </button>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </header>
+          
+    <section id="home" data-aos="fade-up">
+        <div>
+            <h1 class="display-3">SADREA BUILDING SERVICES</h1>
+            <p class="lead">Konstruktion, Gebäudesanierung & Instandhaltung<br>Bauen Sie auf Vertrauen, Qualität und Innovation. Gemeinsam realisieren wir Ihre Bauprojekte zum Erfolg.</p>
+            <button id="openContactPopup" class="btn btn-primary btn-lg mt-3">UNSER SERVICE</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container_main">
+           
+            <!-- Caja 1 -->
+            <div class="counter-box">
+                <div>
+                    <div class="counter" id="counter1">0</div>
+                    <iframe src="https://lottie.host/embed/9a35cc3b-4118-45a4-9918-f9d49222e4b9/A68dPk4RJi.json"></iframe>
+                    <p>ERFOLGREICHE PROJEKTE</p>
+                </div>
+            </div>
+
+            <!-- Caja 2 -->
+            <div class="counter-box">
+                <div>
+                    <div class="counter" id="counter2">0</div>
+                    <iframe src="https://lottie.host/embed/2ba61e99-4901-44fc-bc02-9e22b30b32aa/rc8V6Y8sfu.json"></iframe>
+                    <p>GRÜNDUNGSJAHR</p>
+                </div>
+            </div>
+
+            <!-- Caja 3 -->
+            <div class="counter-box">
+                <div>
+                    <div class="counter" id="counter3">0</div>
+                    <iframe src="https://lottie.host/embed/79214093-1a95-47b4-8003-c80953346a2e/NNNrBaMxq7.json"></iframe>
+                    <p>MITARBEITER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="custom-container">           
+            <div class="about-content">
+                <div class="about-image-container" data-aos="fade-right">
+                    <img src="fotos/trabajador.jpg" alt="trabajador" class="about-image">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h2>ÜBER UNS</h2>
+                    <p>
+                        <h3 class="display-3 premium-title">Sadrea Building Services</h3> ist ein Bauunternehmen mit einer inspirierenden Geschichte und starken Werten wie Integrität, Innovation und herausragender Handwerkskunst. Wir bieten langjährige Erfahrung und professionelle Dienstleistungen an, die die Erwartungen unserer Kunden übertreffen. Nachhaltigkeit steht bei uns im Mittelpunkt, und wir verwenden umweltfreundliche Praktiken und Materialien, um nachhaltige Gebäude zu schaffen.
+                    </p>
+                    <p>Unser erfahrenes Team arbeitet mit Leidenschaft und Liebe zum Detail, um Projekte von höchster Qualität zu realisieren. Kontaktieren Sie uns, um Ihre Visionen erfolgreich umzusetzen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us" style="background-color: #ead882; padding: 50px 0;">
+        <div class="custom-container">
+            <h2 style="color: #fff; text-align: center;">Du suchst nach einem vertrauenswürdigen Partner in Sachen Konstruktion?</h2>
+            
+            <div class="about-us-content" style="color: #fff; margin-top: 30px;">
+                <p class="lead" style="text-align: center;">
+                    Unsere Baufirma bietet umfassende Dienstleistungen im Baugewerbe an. Unser erfahrenes Team aus Architekten, Ingenieuren und Handwerkern arbeitet engagiert daran, die Visionen unserer Kunden in die Realität umzusetzen. Wir bieten individuelle Lösungen, maßgeschneiderte Baukonzepte und höchste Qualität bei der Ausführung.
+                </p>
+
+                <p class="lead" style="text-align: center;">
+                    Unser Leistungsspektrum umfasst den Rohbau oder Renovierung von Wohn- und Gewerbeimmobilien, die Installation von Sanitär- und Elektroanlagen, Pool- und Gartenpflege, Maler- und Verputzarbeiten, und vieles mehr.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Contenedor de Partículas -->
+    <section id="our-services">
+        <div class="custom-container">
+            <h2>Unsere Services</h2>
+            <div id="particles-js"></div>
+    
+            <!-- Primer grupo de servicios con animación hacia la derecha -->
+            <div class="services-container row" id="services-group-1">
+                <!-- Contenido de servicio 1 -->
+                <div class="service-box col-md-4" data-aos="fade-right" data-service-id="service1">
+                    <i class="fas fa-hard-hat fa-3x"></i>
+                    <h3 class="service-title">Konstruktion</h3>
+                    <p>
+                        Unser Konstruktionsservice bietet umfassende Bauleistungen von der Planung bis zur Fertigstellung. Vertrauen Sie auf unsere Erfahrung und Fachkenntnisse, um Ihr Bauprojekt erfolgreich umzusetzen.
+                    </p>
+                    <!-- Botón de redirección a la página de detalles del servicio -->
+                    <button type="button" class="btn btn-primary" onclick="redirectToServiceDetails('service1')">Mehr anzeigen</button>
+                </div>
+    
+                <!-- Contenido de servicio 2 -->
+                <div class="service-box col-md-4" data-aos="fade-right" data-aos-delay="200" data-service-id="service2">
+                    <i class="fas fa-tools fa-3x"></i>
+                    <h3 class="service-title">Renovierung</h3>
+                    <p>
+                        Unsere Renovierungsdienstleistungen umfassen die Modernisierung und Instandsetzung von Wohn- und Geschäftsgebäuden. Bringen Sie neues Leben in Ihre Räume mit unserer fachmännischen Renovierung.
+                    </p>
+                    <!-- Botón de redirección a la página de detalles del servicio -->
+                    <button type="button" class="btn btn-primary" onclick="redirectToServiceDetails('service2')">Mehr anzeigen</button>
+                </div>
+    
+                <!-- Contenido de servicio 3 -->
+                <div class="service-box col-md-4" data-aos="fade-right" data-aos-delay="400" data-service-id="service3">
+                    <i class="fas fa-bath fa-3x"></i>
+                    <h3 class="service-title">Sanitäranlagen</h3>
+                    <p>
+                        Unsere Sanitäranlagendienste bieten professionelle Installation und Wartung von Sanitäranlagen. Schaffen Sie eine komfortable Umgebung mit modernen Sanitärlösungen.
+                    </p>
+                    <!-- Botón de redirección a la página de detalles del servicio -->
+                    <button type="button" class="btn btn-primary" onclick="redirectToServiceDetails('service3')">Mehr anzeigen</button>
+                </div>
+            </div>
+    
+            <!-- Segundo grupo de servicios con animación hacia la izquierda -->
+            <div class="services-container row" id="services-group-2">
+                <!-- Contenido de servicio 4 -->
+                <div class="service-box col-md-4" data-aos="fade-left" data-service-id="service4">
+                    <i class="fas fa-plug fa-3x"></i>
+                    <h3 class="service-title">Elektroanlagen</h3>
+                    <p>
+                        Unsere Elektroanlagendienstleistungen umfassen die Installation und Wartung von elektrischen Systemen. Verlassen Sie sich auf unsere Experten, um die Elektrik in Ihrem Gebäude zu optimieren.
+                    </p>
+                    <!-- Botón de redirección a la página de detalles del servicio -->
+                    <button type="button" class="btn btn-primary" onclick="redirectToServiceDetails('service4')">Mehr anzeigen</button>
+                </div>
+    
+                <!-- Contenido de servicio 5 -->
+                <div class="service-box col-md-4" data-aos="fade-left" data-aos-delay="200" data-service-id="service5">
+                    <i class="fas fa-tree fa-3x"></i>
+                    <h3 class="service-title">Garten- & Poolpflege</h3>
+                    <p>
+                        Unsere Garten- und Poolpflegedienstleistungen sorgen für die Schönheit und Pflege Ihrer Außenanlagen. Genießen Sie eine grüne Oase und einen gepflegten Poolbereich.
+                    </p>
+                    <!-- Botón de redirección a la página de detalles del servicio -->
+                    <button type="button" class="btn btn-primary" onclick="redirectToServiceDetails('service5')">Mehr anzeigen</button>
+                </div>
+    
+                <!-- Contenido de servicio 6 -->
+                <div class="service-box col-md-4" data-aos="fade-left" data-aos-delay="400" data-service-id="service6">
+                    <i class="fas fa-paint-roller fa-3x"></i>
+                    <h3 class="service-title">Maler- & Verputzarbeiten</h3>
+                    <p>
+                        Unsere Maler- und Verputzdienstleistungen verleihen Ihren Räumen Farbe und Textur. Lassen Sie unsere Experten für Malerarbeiten Ihr Zuhause oder Geschäft verschönern.
+                    </p>
+                    <!-- Botón de redirección a la página de detalles del servicio -->
+                    <button type="button" class="btn btn-primary" onclick="redirectToServiceDetails('service6')">Mehr anzeigen</button>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function redirectToServiceDetails(serviceId) {
+                // Redirigir a la página de detalles del servicio
+                window.location.href = 'service_details.html?service=' + serviceId;
+            }
+        </script>
+    </section>
+  <script>
+        function redirectToServiceDetails(serviceId) {
+            // Redirigir a la página de detalles del servicio
+            window.location.href = 'html/service_details.html?service=' + serviceId;
+;
+        }
+    </script>
+    <section>
+    
+  <!-- Contenedor principal de la página con disposición flexbox -->
+  <!-- Contenedor principal de la página con disposición flexbox -->
+  <div class="container-fluid d-flex justify-content-end mt-5">
+    <!-- Caja de chat estilo opciones -->
+    <div id="chat" class="chat-container">
+        <div class="chat-header bg-success text-white py-2">
+            <h6 class="mb-0">Asistente Virtual</h6>
+            <div class="online-status"></div>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <!-- Aquí van los mensajes del chat -->
+        </div>
+    </div>
+</div>
+  
+</div>
+        </div>
+    </div>
+</div>
+
+    </section>
+ 
+
+ <!-- Footer -->
+<footer class="bg-dark text-light py-5">
+   
+   
+    <div class="container">
+        
+        <div class="row text-center">
+            <!-- Información de contacto -->
+            <div class="col-md-4">
+                <h5 class="text-warning mb-4">Kontaktaufnahme</h5>
+                <p>Lass dieses Feld leer</p>
+                <form id="contactForm" method="post" action="/enviar.php">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Dein Name" name="nombre" id="nombre" autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Deine E-Mail" name="email" id="email" autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="3" placeholder="Deine Nachricht" name="message" id="message" autocomplete="off" required></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="agreeCheck" required>
+                        <label class="form-check-label" for="agreeCheck">
+                            Ich bin damit einverstanden, dass diese Website die übermittelten personenbezogenen Daten speichert und verarbeitet (<a href="#" class="text-warning">Datenschutzerklärung</a>).
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-warning mt-3">Absenden</button>
+                </form>
+            </div>
+
+            <!-- Planung -->
+            <div class="col-md-4">
+                <h5 class="text-warning mb-4"><img src="fotos/trabajador2.jpg" alt="trabajador2" width="20%"></h5>
+                <p>Wir betreuen Sie vom ersten Moment an</p>
+            </div>
+
+            <!-- Kontaktinformation -->
+            <div class="col-md-4">
+                <h5 class="text-warning mb-4">Kontakt</h5>
+                <p>Calle Gorg Blau 16, 07300 Inca</p>
+                <p>
+                    <strong>Email:</strong> sadrea1@outlook.es<br>
+                    <strong>Telefon:</strong><br>
+                    +34 618 49 94 58<br>
+                    +34 660 92 23 49<br>
+                    +34 685 47 07 88
+                </p>
+                <h5 class="text-warning mb-3">Folge uns auf Social Media</h5>
+                <a href="#" class="text-warning me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-warning"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Enlaces adicionales y copyright -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <p class="mb-0 text-warning">Links</p>
+                <a href="#" class="text-warning me-3">Impressum</a>
+                <a href="#" class="text-warning me-3">Datenschutzerklärung</a>
+                <a href="#" class="text-warning">Projektgalerie</a>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0 text-warning">© Copyright 2024 Mallorca</p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+   
+
+
+<script>
+    $(document).ready(function () {
+        $('#contactForm').submit(function (e) {
+            e.preventDefault();
+
+            // Aquí puedes agregar lógica adicional para la validación del formulario
+            // por ejemplo, verificar el formato del correo electrónico, longitud del mensaje, etc.
+            // Puedes usar bibliotecas como jQuery Validation para esto.
+
+            // Una vez que las validaciones pasan, puedes enviar el formulario usando AJAX
+            $.ajax({
+                type: 'POST',
+                url: 'enviar.php',  // Asegúrate de tener el archivo enviar.php para manejar el envío del formulario
+                data: $('#contactForm').serialize(),
+                success: function (response) {
+                    // Maneja la respuesta del servidor después de enviar el formulario
+                    console.log(response);
+
+                    // Utiliza AlertifyJS para mostrar un mensaje de éxito
+                    alertify.success('¡Formulario enviado con éxito!');
+
+                    // Puedes actualizar la interfaz de usuario para proporcionar una retroalimentación más amigable
+                    // Por ejemplo, redirigir a una página de agradecimiento o mostrar un mensaje en el formulario.
+                },
+                error: function (error) {
+                    // Maneja errores si hay problemas con la solicitud AJAX
+                    console.log(error);
+
+                    // Utiliza AlertifyJS para mostrar un mensaje de error
+                    alertify.error('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
+                    
+                    // Proporciona mensajes más informativos y sugiere acciones al usuario
+                }
+            });
+        });
+    });
+</script>
+
+
+
+    <!-- Configuración de AOS -->
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+        });
+    </script>
+
+    <!-- Script para manejar el cambio de tamaño del menú al hacer scroll -->
+    <script>
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector("header.navbar");
+            navbar.classList.toggle("navbar-scrolled", window.scrollY > 50);
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Cambiar el comportamiento del menú en dispositivos móviles
+            $('.navbar-toggler').on('click', function () {
+                $('#navbarNav').toggleClass('show');
+            });
+        });
+    </script>
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function () {
+        var navbar = document.querySelector("nav.navbar");
+        var navbarBrand = document.querySelector("a.navbar-brand");
+
+        navbar.classList.toggle("navbar-scrolled", window.scrollY > 50);
+        navbarBrand.classList.toggle("navbar-brand-scrolled", window.scrollY > 50);
+    });
+});
+    </script>
+
+    <!-- Animación de desvanecimiento -->
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        section#home h1,
+        section#home p {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            // Inicializar AOS
+            AOS.init({
+                offset: 200,
+                duration: 1000,
+            });
+
+            // Función para manejar el desplazamiento de las cajas
+            function shiftServices(groupID, distance, duration) {
+                const $group = $(`#${groupID}`);
+                const $blurBox = $group.find('.blur-box');
+
+                $group.on('scroll', function () {
+                    const scrollLeft = $group.scrollLeft();
+                    const blurBoxLeft = -scrollLeft + distance;
+                    $blurBox.css('left', `${blurBoxLeft}px`);
+                });
+
+                $group.animate({ scrollLeft: distance }, duration);
+            }
+
+            // Llamar a la función para el primer grupo de servicios
+            shiftServices('services-group-1', 1000, 5000);
+            // Llamar a la función para el segundo grupo de servicios
+            shiftServices('services-group-2', -1000, 5000);
+        });
+    </script>
+    
+     <!-- Script de Particles.js -->
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <!-- Script de Particles.js -->
+     <script src="js/js/particles.min.js"></script>
+       <!-- Enlace a Particles.js (actualiza según tus necesidades) -->
+    
+    <script src="js/particles-config.js"></script>
+    <script src="js/dinamico.js" ></script>
+    
+     <!-- jQuery -->
+     
+     <script src="script.js" ></script>
+     
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceModalLabel">Servicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="serviceModalContent">
+                    <!-- Contenido del servicio cargado dinámicamente se mostrará aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     
+
+</body>
+
+</html>

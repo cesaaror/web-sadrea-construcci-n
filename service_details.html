@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agrega tus enlaces a CSS, Bootstrap y otras bibliotecas aquí si es necesario -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Detalles del Servicio</title>
+</head>
+
+<body>
+    <div class="custom-container">
+        <h1 id="serviceTitle" class="text-center mt-5"></h1>
+        <p id="serviceDescription" class="text-center"></p>
+        <div id="serviceImages" class="text-center">
+            <!-- Las imágenes se cargarán dinámicamente aquí -->
+        </div>
+    </div>
+    
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceId = urlParams.get('service');
+
+        const serviceDetails = servicesData[serviceId];
+
+        document.getElementById('serviceTitle').innerText = serviceDetails.title;
+        document.getElementById('serviceDescription').innerText = serviceDetails.description;
+
+        const serviceImagesContainer = document.getElementById('serviceImages');
+        serviceDetails.images.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image;
+            imgElement.alt = 'Service Image';
+            imgElement.classList.add('img-fluid');
+            serviceImagesContainer.appendChild(imgElement);
+        });
+    </script>
+    <script src="js/index.js" ></script>
+    
+</body>
+
+
+</html>
